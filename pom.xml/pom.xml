@@ -1,0 +1,22 @@
+<dependencies>
+    <!-- Bootstrap 5 -->
+    <dependency>
+        <groupId>org.webjars</groupId>
+        <artifactId>bootstrap</artifactId>
+        <version>5.3.0</version>
+    </dependency>
+
+    <!-- Font Awesome -->
+    <dependency>
+        <groupId>org.webjars</groupId>
+        <artifactId>font-awesome</artifactId>
+        <version>6.4.0</version>
+    </dependency>
+
+    <!-- jQuery -->
+    <dependency>
+        <groupId>org.webjars</groupId>
+        <artifactId>jquery</artifactId>
+        <version>3.6.4</version>
+    </dependency>
+</dependencies>

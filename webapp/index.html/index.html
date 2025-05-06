@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home Tuition Booking System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    nav {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav h1 { font-size: 1.8em; color: #fff; }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover { color: #ffdd57; }
+    .hero {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .hero-content {
+      max-width: 700px;
+      animation: fadeIn 1.5s ease-out;
+    }
+    .hero h2 { font-size: 2.5em; margin-bottom: 20px; }
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    .hero .btn {
+      padding: 12px 28px;
+      background: #ffdd57;
+      color: #000;
+      font-weight: 600;
+      border: none;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 1em;
+      transition: background 0.3s ease;
+    }
+    .hero .btn:hover { background: #ffd000; }
+
+    .subjects {
+      padding: 50px 20px;
+      background: #fff;
+      color: #333;
+      text-align: center;
+    }
+    .subjects h3 {
+      font-size: 2em;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    .subject-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #f5f5f5;
+      border-radius: 15px;
+      padding: 30px 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .card h4 {
+      font-size: 1.4em;
+      margin-bottom: 10px;
+      color: #2575fc;
+    }
+    .card p {
+      font-size: 0.95em;
+      color: #555;
+    }
+    footer {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 15px;
+      text-align: center;
+      color: #eee;
+      font-size: 0.9em;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <h1>TuitionConnect</h1>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="booking.html">Book a Tutor</a></li>
+    <li><a href="#">Subjects</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>Your Personalized Path to Academic Success</h2>
+    <p>Connect with top-rated tutors in Mathematics, Science, English, and more.</p>
+    <a href="booking.html" class="btn">Book a Tutor Now</a>
+  </div>
+</section>
+
+<section class="subjects">
+  <h3>Popular Subjects</h3>
+  <div class="subject-cards">
+    <div class="card">
+      <a href="booking.html?subject=OOP" style="text-decoration: none; color: inherit;">
+        <h4>OOP</h4>
+        <p>Master Object-Oriented Programming concepts...</p>
+      </a>
+    </div>
+    <div class="card">
+      <a href="booking.html?subject=DSA" style="text-decoration: none; color: inherit;">
+        <h4>DSA</h4>
+        <p>Learn Data Structures and Algorithms...</p>
+      </a>
+    </div>
+    <div class="card">
+      <a href="booking.html?subject=DM" style="text-decoration: none; color: inherit;">
+        <h4>DM</h4>
+        <p>Understand Discrete Mathematics fundamentals...</p>
+      </a>
+    </div>
+    <div class="card">
+      <a href="booking.html?subject=TW" style="text-decoration: none; color: inherit;">
+        <h4>TW</h4>
+        <p>Enhance your technical writing skills...</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 TuitionConnect. All rights reserved.
+</footer>
+
+</body>
+</html>
