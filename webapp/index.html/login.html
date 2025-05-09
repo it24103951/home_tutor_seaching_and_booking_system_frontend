@@ -1,75 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Same head as index.html -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tuition Connect - Tutor Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      background: linear-gradient(to right, #e3f2fd, #fce4ec);
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .card {
+      border: none;
+      border-radius: 10px;
+    }
+    .card-body {
+      padding: 1.5rem;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: #343a40;
+    }
+    .btn-primary {
+      background-color: #0d6efd;
+      border: none;
+      font-size: 0.9rem;
+    }
+    .btn-primary:hover {
+      background-color: #0b5ed7;
+    }
+    .btn-outline-primary {
+      font-size: 0.9rem;
+    }
+    .terms {
+      font-size: 0.75rem;
+      color: #6c757d;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .contact-box {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      font-size: 0.85rem;
+      margin-top: 30px;
+    }
+    .contact-box h4 {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-    <!-- Same navbar as index.html -->
 
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card shadow">
-                    <div class="card-body">
-                        <h2 class="text-center mb-4">
-                            <i class="fas fa-sign-in-alt me-2"></i>Login
-                        </h2>
-                        <form>
-                            <div class="mb-3">
-                                <label class="form-label">Email</label>
-                                <input type="email" class="form-control" required>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Password</label>
-                                <input type="password" class="form-control" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">
-                                <i class="fas fa-unlock me-2"></i> Login
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+  <!-- Navbar Placeholder -->
+  <div id="navbar-placeholder"></div>
+  <script>
+    fetch('components/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+  </script>
+
+  <!-- Main Section -->
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-5 text-center">
+        <!-- Login Card -->
+        <div class="card shadow">
+          <div class="card-body">
+            <h2 class="mb-3">
+              <i class="fas fa-sign-in-alt me-2"></i>TuitionConnect
+            </h2>
+            <form>
+              <div class="input-group mb-3">
+                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                <input type="email" class="form-control" placeholder="Email" required>
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                <input type="password" class="form-control" placeholder="Password" required>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100 mb-3">
+                <i class="fas fa-unlock me-2"></i>Login
+              </button>
+
+              <!-- Social Login Buttons -->
+              <div class="d-grid gap-2 mb-3">
+                <button class="btn btn-light border d-flex align-items-center justify-content-center">
+                  <i class="fab fa-google me-2"></i> Continue with Google
+                </button>
+                <button class="btn btn-dark d-flex align-items-center justify-content-center">
+                  <i class="fab fa-apple me-2"></i> Continue with Apple
+                </button>
+              </div>
+
+              <div class="terms">
+                By signing in or creating an account, you agree with our 
+                <a href="Terms and Conditions.html">Terms & Conditions</a> and 
+                <a href="Privacy Statement.html">Privacy Statement</a>.
+              </div>
+
+              <div class="text-center mt-2">
+                <small>Don't have an account? <a href="Student Register.html">Register here</a></small>
+              </div>
+            </form>
+          </div>
         </div>
-    </div>
 
-    <!-- Same scripts as index.html -->
+        <!-- Optional Sign In/Create Button -->
+        <div class="text-center mt-3">
+          <a href="Student Register.html" class="btn btn-outline-primary">
+            <i class="fas fa-user-plus me-2"></i>Sign In / Create Account
+          </a>
+        </div>
+
+        <!-- Contact Us Section -->
+        <div class="contact-box mt-4">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-envelope me-2"></i>support@tuitionconnect.com</p>
+          <p><i class="fas fa-phone me-2"></i>+94 (37) 1234-1234</p>
+          <p><i class="fas fa-map-marker-alt me-2"></i>99 Colombo Sri Lanka</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 TuitionConnect. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-<form>
-    <div class="input-group mb-3">
-      <span class="input-group-text">
-        <i class="fas fa-envelope"></i>
-      </span>
-      <input type="email" class="form-control" placeholder="Email">
-    </div>
-    
-    <div class="input-group mb-3">
-      <span class="input-group-text">
-        <i class="fas fa-lock"></i>
-      </span>
-      <input type="password" class="form-control" placeholder="Password">
-    </div>
-    
-    <button type="submit" class="btn btn-primary w-100">
-      <i class="fas fa-sign-in-alt me-2"></i> Login
-    </button>
-  </form>
-
-  <!-- At the top of each HTML file -->
-<head>
-    ...
-    <link rel="import" href="components/navbar.html">
-  </head>
-  <body>
-    <div id="navbar-placeholder"></div>
-    <script>
-      fetch('components/navbar.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('navbar-placeholder').innerHTML = data;
-        });
-    </script>
-    ...
-  </body> this login.html so ugly generate more colorful one
